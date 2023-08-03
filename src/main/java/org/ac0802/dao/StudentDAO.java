@@ -1,35 +1,32 @@
-package ac0802.dao;
+package org.ac0802.dao;
 
-import ac0802.dto.Student_viewDTO;
+import org.ac0802.dto.StudentDTO;
 
 import java.sql.DriverManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Student_viewDAO extends DAO{
-    public List<Student_viewDTO> selectAll(){
+public class StudentDAO extends DAO{
+    public List<StudentDTO> selectAll(){
         try {
 
-            String sql = "select * from test_student_view";
+            String sql = "select * from test_student";
 
             conn = DriverManager.getConnection(url,user,password);
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
 
-            List<Student_viewDTO> list = new ArrayList<Student_viewDTO>();
+            List<StudentDTO> list = new ArrayList<StudentDTO>();
 
             while (rs.next()) {
-                Student_viewDTO row = new Student_viewDTO();
+                StudentDTO row = new StudentDTO();
 
                 row.setEng(rs.getInt("eng"));
                 row.setKor(rs.getInt("kor"));
                 row.setMat(rs.getInt("mat"));
                 row.setName(rs.getString("name"));
-                row.setAvg(rs.getDouble("avg"));
-                row.setTotal(rs.getInt("total"));
 
                 list.add(row);
-
             }
 
             return list;
@@ -43,5 +40,4 @@ public class Student_viewDAO extends DAO{
         }
         return null;
     }
-
 }

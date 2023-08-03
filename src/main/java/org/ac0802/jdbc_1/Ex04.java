@@ -1,7 +1,7 @@
-package ac0802.jdbc_1;
+package org.ac0802.jdbc_1;
 
-import ac0802.dao.PersonDao;
-import ac0802.dto.PersonDTO;
+import org.ac0802.dao.PersonDao;
+import org.ac0802.dto.PersonDTO;
 
 import java.util.List;
 

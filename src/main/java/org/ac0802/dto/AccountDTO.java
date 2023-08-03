@@ -1,4 +1,4 @@
-package ac0802.dto;
+package org.ac0802.dto;
 
 import java.sql.Date;
 

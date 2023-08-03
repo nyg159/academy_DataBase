@@ -1,7 +1,7 @@
-package ac0802.jdbc_1;
+package org.ac0802.jdbc_1;
 
 
-import ac0802.dao.DAO;
+import org.ac0802.dao.DAO;
 
 /*
  * 			DAO : Data Access Object

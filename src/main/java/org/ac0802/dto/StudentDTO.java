@@ -1,4 +1,4 @@
-package ac0802.dto;
+package org.ac0802.dto;
 
 public class StudentDTO {
     private String name;

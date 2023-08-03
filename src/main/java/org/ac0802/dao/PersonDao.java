@@ -1,7 +1,7 @@
-package ac0802.dao;
+package org.ac0802.dao;
 
 
-import ac0802.dto.PersonDTO;
+import org.ac0802.dto.PersonDTO;
 
 import java.sql.DriverManager;
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
-package ac0802.dao;
+package org.ac0802.dao;
 
-import ac0802.dto.AccountDTO;
+import org.ac0802.dto.AccountDTO;
 
 import java.sql.DriverManager;
 import java.util.ArrayList;

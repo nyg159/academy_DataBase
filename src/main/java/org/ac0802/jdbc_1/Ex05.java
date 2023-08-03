@@ -1,4 +1,4 @@
-package ac0802.jdbc_1;
+package org.ac0802.jdbc_1;
 
 
 /*
@@ -11,10 +11,10 @@ package ac0802.jdbc_1;
 		// 단, 간격은 크게 신경 쓰지 말자
  */
 
-import ac0802.dao.StudentDAO;
-import ac0802.dao.Student_viewDAO;
-import ac0802.dto.StudentDTO;
-import ac0802.dto.Student_viewDTO;
+import org.ac0802.dao.StudentDAO;
+import org.ac0802.dao.Student_viewDAO;
+import org.ac0802.dto.StudentDTO;
+import org.ac0802.dto.Student_viewDTO;
 
 import java.util.List;
 
@@ -39,7 +39,7 @@ public class Ex05 {
         Student_viewDAO viewDAO = new Student_viewDAO();
         List<Student_viewDTO> list2 = viewDAO.selectAll();
 
-        System.out.println("");
+        System.out.println();
         System.out.println("        이름\t  국어 \t 영어 \t 수학\t 총합\t 평균\t");
         System.out.println("------------------------------------");
 

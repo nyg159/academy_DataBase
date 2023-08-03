@@ -1,4 +1,4 @@
-package ac0802.jdbc_1;
+package org.ac0802.jdbc_1;
 
 import java.sql.*;
 

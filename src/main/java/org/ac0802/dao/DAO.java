@@ -1,4 +1,4 @@
-package ac0802.dao;
+package org.ac0802.dao;
 
 import java.sql.*;
 
