@@ -1,16 +1,16 @@
-package org.ac0802.dao;
+package org.dao;
 
 import java.sql.*;
 
 public class DAO {
     protected String driver = "oracle.jdbc.driver.OracleDriver";
-    protected String url = "jdbc:oracle:thin:@192.168.1.100:1521:xe";
+    protected String url = "jdbc:oracle:thin:@192.168.113.200:1521:xe";
     protected String user = "c##itbank";
     protected String password = "it";
 
     protected Connection conn = null; // DB에 연결을 생성하고 유지하는 객체
     protected Statement stmt = null; // SQL 구문을 실행할 객체
-    protected ResultSet rs = null; // table의 결과를 가진 집합(= Set)
+    protected ResultSet rs = null; // table 의 결과를 가진 집합(= Set)
 
     public DAO() {
         try {
@@ -60,5 +60,29 @@ public class DAO {
         }
 
         return null;
+    }
+
+    public String systemTime(){
+
+        try {
+            String sql = "select TO_DATE(sysdate) as time from dual;";
+
+            conn = DriverManager.getConnection(url, user, password);
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery(sql);
+
+            rs.next();
+
+            return rs.getString("time");
+
+        } catch (SQLException e) {
+            System.err.println("test 예외 : " + e.getMessage());
+
+        } finally {
+            close();
+        }
+
+        return null;
+
     }
 }

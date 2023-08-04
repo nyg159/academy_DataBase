@@ -1,6 +1,6 @@
 package org.ac0802.jdbc_1;
 
-import org.ac0802.dao.DAO;
+import org.dao.DAO;
 
 /*
  * 	OOP : 객체 지향의 핵심은 '재사용'

@@ -11,10 +11,10 @@ package org.ac0802.jdbc_1;
 		// 단, 간격은 크게 신경 쓰지 말자
  */
 
-import org.ac0802.dao.StudentDAO;
-import org.ac0802.dao.Student_viewDAO;
-import org.ac0802.dto.StudentDTO;
-import org.ac0802.dto.Student_viewDTO;
+import org.dao.StudentDAO;
+import org.dao.Student_viewDAO;
+import org.dto.StudentDTO;
+import org.dto.Student_viewDTO;
 
 import java.util.List;
 

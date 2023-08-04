@@ -1,6 +1,6 @@
-package org.ac0802.dao;
+package org.dao;
 
-import org.ac0802.dto.StudentDTO;
+import org.dto.StudentDTO;
 
 import java.sql.DriverManager;
 import java.util.ArrayList;

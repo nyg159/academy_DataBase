@@ -5,7 +5,7 @@ import java.sql.*;
 public class Ex01 {
     public static void main(String[] args) {
         String driver = "oracle.jdbc.driver.OracleDriver";
-        String url = "jdbc:oracle:thin:@192.168.1.100:1521:xe";
+        String url = "jdbc:oracle:thin:@192.168.113.200:1521:xe";
         String user = "c##itbank";
         String password = "it";
 

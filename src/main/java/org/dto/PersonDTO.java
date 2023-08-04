@@ -1,4 +1,4 @@
-package org.ac0802.dto;
+package org.dto;
 
 /*
  * 		DTO : Data Transfer Object

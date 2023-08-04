@@ -3,8 +3,8 @@ package org.ac0803.jdbc_2;
 /*
         복습용
  */
-import org.ac0802.dao.Student_viewDAO;
-import org.ac0802.dto.Student_viewDTO;
+import org.dao.Student_viewDAO;
+import org.dto.Student_viewDTO;
 
 import java.util.List;
 
