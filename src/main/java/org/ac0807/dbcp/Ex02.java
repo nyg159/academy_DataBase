@@ -156,21 +156,21 @@ public class Ex02 {
         System.out.println(dao.selectAll());
 
         // 2. insert
-        Scanner scanner = new Scanner(System.in);
-        PersonVO1 input = getInstance(scanner);
-        int row = dao.insert(input);
-
-        // 3. delect
-        String name = getName(scanner);
-        row = dao.delete(name);
-
-        // 4. update
-        name = getName(scanner);
-        input = getInstance(scanner);
-        row = dao.update(input, name);
-
-
-        System.out.println(dao.selectAll());
+//        Scanner scanner = new Scanner(System.in);
+//        PersonVO1 input = getInstance(scanner);
+//        int row = dao.insert(input);
+//
+//        // 3. delect
+//        String name = getName(scanner);
+//        row = dao.delete(name);
+//
+//        // 4. update
+//        name = getName(scanner);
+//        input = getInstance(scanner);
+//        row = dao.update(input, name);
+//
+//
+//        System.out.println(dao.selectAll());
 
     }
 }
