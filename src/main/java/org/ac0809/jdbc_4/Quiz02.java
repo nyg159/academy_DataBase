@@ -9,52 +9,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-class Quiz02DTO{
-    private String student_name, department_name, department_phone, student_phone;
-    private int student_idx;
-
-    public int getStudent_idx() {
-        return student_idx;
-    }
-
-    public void setStudent_idx(int student_idx) {
-        this.student_idx = student_idx;
-    }
-
-    public String getStudent_name() {
-        return student_name;
-    }
-
-    public void setStudent_name(String student_name) {
-        this.student_name = student_name;
-    }
-
-    public String getDepartment_name() {
-        return department_name;
-    }
-
-    public void setDepartment_name(String department_name) {
-        this.department_name = department_name;
-    }
-
-    public String getDepartment_phone() {
-        return department_phone;
-    }
-
-    public void setDepartment_phone(String department_phone) {
-        this.department_phone = department_phone;
-    }
-
-    public String getStudent_phone() {
-        return student_phone;
-    }
-
-    public void setStudent_phone(String student_phone) {
-        this.student_phone = student_phone;
-    }
-
-}
-
 class Quiz02Dao extends DaoQuiz{
     public List<Quiz01DTO> selectAll(){
         try {
