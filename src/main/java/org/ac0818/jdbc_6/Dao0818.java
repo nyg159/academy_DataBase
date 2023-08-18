@@ -1,11 +1,12 @@
-package org.ac0817;
+package org.ac0818.jdbc_6;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 
-import java.lang.reflect.Type;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Dao {
+public class Dao0818 {
     String url = "jdbc:oracle:thin:@192.168.113.200:1521:xe";
     String userName = "c##itbank";
     String passWord = "it";
@@ -18,7 +19,7 @@ public class Dao {
     CallableStatement cstmt;    // 프로시저 호출시 사용할 statement
     ResultSet rs;
 
-    public Dao(){
+    public Dao0818(){
         ds = new BasicDataSource();
 
         ds.setUrl(url);
@@ -70,9 +71,9 @@ public class Dao {
         return null;
     }
 
-    public int proTest(int n1, int n2){
+    public int sal_up_pro(int n1, int n2){
         try {
-            String sql = "{call test1234(?,?,?)}";
+            String sql = "{call sal_up(?,?,?)}";
 
             conn = ds.getConnection();
             cstmt = conn.prepareCall(sql);
@@ -99,5 +100,51 @@ public class Dao {
         }
         return 0;
     }
+
+    public int absFunc(int n1) {
+        try {
+            String sql = "select num1(?) from dual";
+
+            conn = ds.getConnection();
+            pstmt = conn.prepareStatement(sql);
+
+            pstmt.setInt(1,n1);
+            rs = pstmt.executeQuery();
+
+            rs.next();
+
+            return rs.getInt(1);
+
+        } catch (SQLException e) {
+            System.err.println("절대값 함수 예외");
+        }finally {
+            close();
+        }
+        return 0;
+    }
+
+
+    public int reverseFuc(int n1) {
+        try {
+            String sql = "select rev(?) from dual";
+
+            conn = ds.getConnection();
+            pstmt = conn.prepareStatement(sql);
+
+            pstmt.setInt(1, n1);
+            rs = pstmt.executeQuery();
+
+            rs.next();
+
+            return rs.getInt(1);
+
+        } catch (SQLException e) {
+            System.err.println("입력 받은 수를 반대로 반환 함수 예외");
+        } finally {
+            close();
+        }
+        return 0;
+    }
+
 
 }
